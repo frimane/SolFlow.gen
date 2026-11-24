@@ -1,0 +1,14 @@
+{
+  "seed": 1990,
+  "paths": {"windows": "data/windows_multi.npz", "models_dir": "runs/strict"},
+  "split": {
+    "scheme": "strict_spatiotemporal_holdout",
+    "train_years": [2017, 2018, 2019, 2020, 2021],
+    "test_years": [2022],
+    "spatial_test_stations": 10,
+    "spatial_repeats": 4,
+    "spatial_seed": 1990,
+    "val_frac": 0.1
+  },
+  "model": {"condition_regime": false}
+}

@@ -1,0 +1,8 @@
+{
+  "seed": 1990,
+  "paths": {"raw_glob": "data/raw/*.csv", "windows": "data/windows.npz", "models_dir": "runs/single_site"},
+  "site": {"name": "my_site", "latitude": 48.85, "longitude": 2.35, "altitude": 35},
+  "data": {"resolution_min": 10, "source_resolution_min": 1, "resample": true},
+  "split": {"scheme": "holdout", "holdout": {"train_frac": 0.8}, "val_frac": 0.1},
+  "model": {"condition_regime": false}
+}

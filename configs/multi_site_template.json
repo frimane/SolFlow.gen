@@ -1,0 +1,10 @@
+{
+  "seed": 1990,
+  "paths": {"windows": "data/windows_multi.npz", "models_dir": "runs/multi_site"},
+  "sites": [
+    {"name": "station_a", "raw_glob": "data/raw/station_a/*.csv", "latitude": 48.85, "longitude": 2.35, "altitude": 35},
+    {"name": "station_b", "raw_glob": "data/raw/station_b/*.csv", "latitude": 43.30, "longitude": 5.37, "altitude": 12}
+  ],
+  "split": {"scheme": "loso", "val_frac": 0.1},
+  "model": {"condition_regime": true}
+}

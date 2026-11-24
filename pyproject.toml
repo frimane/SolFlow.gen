@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SolFlow.gen"
+version = "0.1.0"
+description = "Conditional Flow matching for probabilistic solar irradiance scenario generation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "torch>=2.2"]
+authors = [
+    { name = "Âzeddine Frimane" },
+]
+maintainers = [
+    { name = "Âzeddine Frimane" },
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.8"]
+yaml = ["pyyaml>=6"]
+app = ["streamlit>=1.52", "plotly>=5.22", "pvlib>=0.10"]
+
+[project.scripts]
+solflow-gen = "solflow_gen.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["solflow_gen*"]

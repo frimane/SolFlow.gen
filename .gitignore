@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.venv/
+runs/
+
+
+# Ignore model files and arrays, but keep the released app checkpoints
+*.pt
+*.npz
+!streamlit_app/checkpoints/
+!streamlit_app/checkpoints/*.pt
