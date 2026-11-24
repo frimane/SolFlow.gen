@@ -252,7 +252,7 @@ Mean pinball loss is **0.070** (SolFlow) vs **0.068** (DeepQuantile). SolFlow's 
 ```
 
 > [!TIP]
-> The same data is available as [`data/stations.geojson`](data/stations.geojson) — GitHub renders it as an interactive map when opened directly, and you can load it in QGIS, `geopandas`, Kepler.gl or geojson.io.
+> The same data is available as [`stations.geojson`](stations.geojson) — GitHub renders it as an interactive map when opened directly, and you can load it in QGIS, `geopandas`, Kepler.gl or geojson.io.
 
 <details>
 <summary><b>📋 Full station table (90 rows)</b></summary>
