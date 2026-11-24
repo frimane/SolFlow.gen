@@ -15,7 +15,7 @@ CLEARSKY_MODEL = "ineichen"
 DEFAULT_POINT = {"lat": 45.46, "lon": 3.53, "alt": 1070.0}
 MIN_ENSEMBLE = 1
 MAX_ENSEMBLE = 25
-DEFAULT_ENSEMBLE = 25
+DEFAULT_ENSEMBLE = 10
 DEFAULT_SEED = 0
 
 # Every panel in the main row has the same outer height in every state (empty,
