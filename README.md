@@ -45,6 +45,8 @@ The model is available as a Streamlit app, no installation required:
 
 </div>
 
+> **Note:** The app is hosted on Streamlit Community Cloud and goes to sleep after a period of inactivity. If you see a *"This app has gone to sleep due to inactivity"* page, click **"Yes, get this app back up!"** and wait a minute or so for it to wake up.
+
 ## Quick start
 
 To run the app locally:
