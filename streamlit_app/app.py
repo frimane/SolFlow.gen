@@ -18,6 +18,9 @@ from ui.layout import render_topbar
 from ui.results import render_empty, render_loading, render_results
 from ui.styles import inject_styles
 
+# The app always uses checkpoint 1 (fold 1).
+CHECKPOINT_FILE = "checkpoint_fold1.pt"
+
 st.set_page_config(page_title="SolFlow geometry generator", layout="wide", initial_sidebar_state="collapsed")
 inject_styles(PLOT_HEIGHT)
 render_topbar()
@@ -41,7 +44,7 @@ def validate_range(start, end):
 if submitted:
     try:
         validate_range(start_date, end_date)
-        checkpoint_path = resolve_checkpoint_path(st.session_state.get("checkpoint_selector"))
+        checkpoint_path = resolve_checkpoint_path(CHECKPOINT_FILE)
         body = render_loading(plot_area, kpi_area)
         with body:
             with st.status("Generating samples", expanded=True) as status:

@@ -2,7 +2,6 @@ import datetime as dt
 
 import streamlit as st
 
-from checkpoint_source import default_checkpoint_index, list_checkpoints
 from config import DEFAULT_POINT, DEFAULT_ENSEMBLE, DEFAULT_SEED, MAX_ENSEMBLE, MIN_ENSEMBLE
 from ui.layout import panel, panel_header
 
@@ -45,10 +44,8 @@ def render_control_panel(left_col):
                 seed = c2.number_input("Random seed", 0, 2**31 - 1, DEFAULT_SEED, step=1, format="%d")
                 submitted = st.form_submit_button("Generate samples", type="primary", width="stretch")
 
-                # Inside the form: changing it does not rerun until "Generate samples" is clicked.
-                checkpoints = list_checkpoints()
-                if checkpoints:
-                    st.selectbox("Checkpoint", checkpoints, index=default_checkpoint_index(checkpoints), key="checkpoint_selector")
-                else:
-                    st.caption("No .pt/.pth files found in the checkpoints folder. Copy a trained flow checkpoint there.")
+            st.caption(
+                "Clear-sky GHI in this app comes from the Ineichen (pvlib) model, not McClear. "
+                "The checkpoint was trained with McClear (CAMS). So for exact results, download McClear."
+            )
     return submitted, start_date, end_date, float(latitude), float(longitude), float(altitude_m), int(ensemble_size), int(seed)
