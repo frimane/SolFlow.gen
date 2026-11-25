@@ -45,7 +45,8 @@ def render_control_panel(left_col):
                 submitted = st.form_submit_button("Generate samples", type="primary", width="stretch")
 
             st.caption(
-                "Clear-sky GHI in this app comes from the Ineichen (pvlib) model, not McClear. "
-                "The checkpoint was trained with McClear (CAMS). So for exact results, download McClear."
+                "The checkpoint was trained with McClear (CAMS). The generated clear-sky index "
+                "comes raw from the checkpoint, and the conversion to GHI is done with the "
+                "Ineichen (pvlib) clear-sky model. For exact results, use McClear."
             )
     return submitted, start_date, end_date, float(latitude), float(longitude), float(altitude_m), int(ensemble_size), int(seed)
